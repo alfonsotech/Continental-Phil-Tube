@@ -4,7 +4,6 @@ $(function(){
   $('#search-term').submit(function(event){
     event.preventDefault();
     var searchTerm = $('#query').val();
-    console.log(searchTerm);
     getRequest(searchTerm);
   });
 });
@@ -24,18 +23,32 @@ function getRequest(searchTerm){
 
   //execute Get request
   $.getJSON(url, params, function(data){
-    showResults(data.part); //data.part?
+    showResults(data.items);
+
   });
 }
 
-//something not working with this func
 function showResults(results){
   var html = "";
   $.each(results, function(index,value){
-    thumbnail = data.items.snippet.thumbnails;
-    html += '<p>' + value.snippet.title + '</p>' + '<br>' +'<div>' + thumbnail +'</div>';
-console.log('done');
-    console.log(value.snippet.title);
+    thumbnail = '<img src= " ' + value.snippet.thumbnails.default.url + ' " />';
+    var singleVid = '<div id="target"><p>' + value.snippet.title + '</p>' + '<br>' +'<div>' + thumbnail +'</div></div>';
+
+    html += singleVid;
+    
+    var videoPlay = function (){
+      var vidLink = 'https://www.youtube.com/embed/' + value.id.videoId;
+      console.log(vidLink);
+      $('<iframe width="560" height="315" frameborder="0" allowfullscreen></iframe>').attr('src', vidLink).appendTo('#fullPlay');
+
+    };
+    
+    var singleVid = $(singleVid); 
+    console.log(singleVid); 
+    singleVid.click(videoPlay);
+    $('#search-results').append(singleVid);
+
   });
-  $('#search-results').html(html);
+  //$('#search-results').html(html);
 }
+
