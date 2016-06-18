@@ -1,0 +1,17 @@
+/*MAIN CSS*/
+.header,
+.form,
+.fullPlay,
+.thumbnails,
+.footer {
+	max-width: 400px;
+	width: 100%
+	margin: 50 auto;
+	display: block;
+}
+.form {
+
+}
+/*THUMBNAILS*/
+
+/*FULL VIDEO*/

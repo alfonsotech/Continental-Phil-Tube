@@ -9,23 +9,53 @@
 
 
 	<body>
-		<header>Continental Philosophy Tube</header>
+		<!-- Header -->
+		<section class="header">
+			<div class="header_wrap">
+				<div class="header_data">
+					<header>Continental Philosophy Tube</header>
+				</div><!--/.header_data -->
+			</div><!--/.header_wrap -->
+		</section>
 
-		<form id="search-term"> 
-			<p><input type="text" id="query" placeholder="Type search request here..." autocomplete="off"></p>
-			<button type="submit">Search Now</button>
-		</form>
+		<!-- Search Form -->
+		<section class="form">
+			<div class="form_wrap">
+				<div class="form_data">
+					<form id="search-term"> 
+						<p><input type="text" id="query" placeholder="Type search request here..." autocomplete="off"></p>
+						<button type="submit">Search Now</button>
+					</form>
+				</div><!--/.form_data -->
+			</div><!--/.form_wrap -->
+		</section>
 
-		<div id="search-results"></div>
 
-		<div id="fullPlay">	
-		</div>
+		<!-- Full Video Display -->
+		<section class="fullPlay">
+			<div class="fullPlay_wrap">
+				<div class="fullPlay_data">
+					<div id="fullPlay">	</div>
+				</div><!-- /.fullPlay_data -->
+			</div><!-- /.fullPlay_wrap-->
+		</section>
+		
+		<!-- Thumbnails Display -->
+		<section class="thumbnails">
+			<div class="thumbnails_wrap">
+				<div class="thumbnails_data">
+					<div id="search-results"></div>
+				</div><!-- /.thumbnails_data -->
+			</div><!-- /.thumbnails_wrap-->
+		</section>		
+
+		<section class="footer">
+			<footer></footer>
+		</section>
 		
 	<!-- Scripts-->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 		<script  type='text/javascript' src='app.js'></script>
-
-
 
 	</body>
 </html>

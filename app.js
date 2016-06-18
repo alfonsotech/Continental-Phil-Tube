@@ -40,7 +40,6 @@ function showResults(results){
       var vidLink = 'https://www.youtube.com/embed/' + value.id.videoId;
       console.log(vidLink);
       $('<iframe width="560" height="315" frameborder="0" allowfullscreen></iframe>').attr('src', vidLink).appendTo('#fullPlay');
-
     };
     
     var singleVid = $(singleVid); 
