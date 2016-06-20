@@ -4,14 +4,45 @@
 .fullPlay,
 .thumbnails,
 .footer {
-	max-width: 400px;
+	max-width: 1200px;
 	width: 100%
-	margin: 50 auto;
+	margin: 0 auto;
 	display: block;
 }
 .form {
 
 }
+footer {
+	
+	text-align: center;
+}
 /*THUMBNAILS*/
+.thumbnails_wrap {
 
-/*FULL VIDEO*/
+
+}
+.thumbnails_data {
+
+}
+#search-results {
+
+width: 33%;
+margin: 20px;
+padding: 20px;
+display: inline-block;
+text-align: center;
+}
+#fullPlay {
+width: 33%;
+margin: 20px;
+padding: 20px;
+display: inline-block;
+text-align: center;
+}
+/*FULL VIDEO PLAY*/
+.fullPlay_wrap {
+
+}
+.fullPlay_data {
+
+}
