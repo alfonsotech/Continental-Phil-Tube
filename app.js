@@ -1,7 +1,7 @@
 $(function(){
   $('.philosopher').click(function(event){
     event.preventDefault();
-    var searchTerm = $(this).text() + ' philosophy';
+    var searchTerm = $(this).text() + ' philosophy' + ' -pdf' + ' -download';
     console.log(searchTerm);
     getRequest(searchTerm);
   });
@@ -11,7 +11,7 @@ $(function(){
 $(function(){
   $('.movement').click(function(event){
     event.preventDefault();
-    var searchTerm = $(this).text() + ' philosophy';
+    var searchTerm = $(this).text() + ' philosophy' + ' -pdf' + ' -download';
     console.log(searchTerm);
     getRequest(searchTerm);
   });
@@ -20,6 +20,8 @@ $(function(){
 
 
 function getRequest(searchTerm){
+  emptyFullVid ();
+  emptyThumbnails ();
   var params = {
     q: searchTerm,
     part: 'snippet',
@@ -46,22 +48,31 @@ function showResults(results){
   var html = "";
   $.each(results, function(index,value){
     thumbnail = '<img src= " ' + value.snippet.thumbnails.default.url + ' " />';
-  var singleVid = '<div class="target"><p>' + value.snippet.title + '</p>' + '<br>' +'<div>' + thumbnail +'</div></div>';
+    var singleVid = '<div class="target"><p>' + value.snippet.title + '</p>' + '<br>' +'<div>' + thumbnail +'</div></div>';
 
-  html += singleVid;
+    html += singleVid;
+      
+    var videoPlay = function (){
+      var vidLink = 'https://www.youtube.com/embed/' + value.id.videoId;
+      emptyFullVid ();
+      $('<iframe width="560" height="315" frameborder="0" allowfullscreen></iframe>').attr('src', vidLink).appendTo('#fullPlay');
+    };
     
-  var videoPlay = function (){
-    var vidLink = 'https://www.youtube.com/embed/' + value.id.videoId;
-    
-    $('<iframe width="560" height="315" frameborder="0" allowfullscreen></iframe>').attr('src', vidLink).appendTo('#fullPlay');
-  };
-    
-  var singleVid = $(singleVid); 
+    var singleVid = $(singleVid); 
     console.log(singleVid); 
     singleVid.click(videoPlay);
+
     $('#search-results').append(singleVid);
-  });
+  }); //each loop end
+
   //$('#search-results').html(html);
 } // showResults end
 
+function emptyFullVid () {
+  $('#fullPlay').empty();
+}
+
+function emptyThumbnails () {
+  $('#search-results').empty();
+}
 
