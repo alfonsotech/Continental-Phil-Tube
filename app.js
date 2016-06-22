@@ -1,7 +1,11 @@
+/*GLOBAL VARIABLES*/
+var searchTerm;
+var nextToken;
+
 $(function(){
   $('.philosopher').click(function(event){
     event.preventDefault();
-    var searchTerm = $(this).text() + ' philosophy' + ' -pdf' + ' -download';
+    searchTerm = $(this).text() + ' philosophy' + ' -pdf' + ' -download';
     console.log(searchTerm);
     getRequest(searchTerm);
   });
@@ -11,7 +15,7 @@ $(function(){
 $(function(){
   $('.movement').click(function(event){
     event.preventDefault();
-    var searchTerm = $(this).text() + ' philosophy' + ' -pdf' + ' -download';
+    searchTerm = $(this).text() + ' philosophy' + ' -pdf' + ' -download';
     console.log(searchTerm);
     getRequest(searchTerm);
   });
@@ -33,7 +37,8 @@ function getRequest(searchTerm){
     order:'rating',
     order:'viewCount',
     order:'date',
-    key: 'AIzaSyBNqWhJ5DVOzZe4OEavx1-aB1uQTr6KJrA'
+    key: 'AIzaSyBNqWhJ5DVOzZe4OEavx1-aB1uQTr6KJrA',
+    pageToken: nextToken
   };
 
   var url = 'https://www.googleapis.com/youtube/v3/search';
@@ -41,6 +46,7 @@ function getRequest(searchTerm){
   //execute Get request
   $.getJSON(url, params, function(data){
     showResults(data.items);
+    nextToken = data.nextPageToken;
   });
 } //getRequest end
 
@@ -63,8 +69,10 @@ function showResults(results){
     singleVid.click(videoPlay);
 
     $('#search_results').append(singleVid);
+    
   }); //each loop end
 
+  showMore ();
   //$('#search-results').html(html);
 } // showResults end
 
@@ -74,5 +82,11 @@ function emptyFullVid () {
 
 function emptyThumbnails () {
   $('#search_results').empty();
+}
+function showMore (){
+  $('.moreResults').click (function () {
+     $('#search_results').html('');
+    getRequest (searchTerm);
+  });
 }
 
