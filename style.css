@@ -4,10 +4,7 @@
 .fullPlay,
 .thumbnails,
 .footer {
-	max-width: 1200px;
-	width: 100%
-	margin: 0 auto;
-	display: block;
+
 }
 .form {
 
@@ -19,27 +16,31 @@ footer {
 /*THUMBNAILS*/
 .thumbnails_wrap {
 
-
 }
 .thumbnails_data {
 
 }
-#search-results {
+#search_results {
+width: 100%;
+}
 
-width: 33%;
-margin: 20px;
-padding: 20px;
+.target {
+width: 31%;
 display: inline-block;
 text-align: center;
-
+border: 1px solid gray;
+margin: 1%;
+height: 275px;
+}
+.target p {
+	height: 37px;
 }
 
 #fullPlay {
-width: 33%;
-margin: 20px;
-padding: 20px;
-display: inline-block;
-text-align: center;
+	max-width: 800px;
+	margin: 0px auto;
+	display: block;
+	padding: 40px;
 
 }
 /*FULL VIDEO PLAY*/

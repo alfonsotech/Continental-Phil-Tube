@@ -28,7 +28,7 @@ function getRequest(searchTerm){
     type: 'video',
     videoEmbeddable: true,
     //videoCategoryId:'', https://developers.google.com/youtube/v3/docs/videoCategories/list#parameters
-    maxResults:5,
+    maxResults:6,
     order:'date',
     order:'rating',
     order:'viewCount',
@@ -47,7 +47,7 @@ function getRequest(searchTerm){
 function showResults(results){
   var html = "";
   $.each(results, function(index,value){
-    thumbnail = '<img src= " ' + value.snippet.thumbnails.default.url + ' " />';
+    thumbnail = '<img src= " ' + value.snippet.thumbnails.medium.url + ' " />';
     var singleVid = '<div class="target"><p>' + value.snippet.title + '</p>' + '<br>' +'<div>' + thumbnail +'</div></div>';
 
     html += singleVid;
@@ -62,7 +62,7 @@ function showResults(results){
     console.log(singleVid); 
     singleVid.click(videoPlay);
 
-    $('#search-results').append(singleVid);
+    $('#search_results').append(singleVid);
   }); //each loop end
 
   //$('#search-results').html(html);
@@ -73,6 +73,6 @@ function emptyFullVid () {
 }
 
 function emptyThumbnails () {
-  $('#search-results').empty();
+  $('#search_results').empty();
 }
 
