@@ -20,6 +20,9 @@ footer,
 hr {
 	width: 80%;
 }
+.hidden {
+	display: none;
+}
 /*THUMBNAILS*/
 .thumbnails_wrap {
 
@@ -58,3 +61,4 @@ hr {
 .fullPlay_data {
 
 }
+

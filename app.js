@@ -2,6 +2,7 @@
 var searchTerm;
 var nextToken;
 
+/*SET SEARCH REQUEST BY TYPE*/
 $(function(){
   $('.philosopher').click(function(event){
     event.preventDefault();
@@ -22,10 +23,10 @@ $(function(){
 
 }); //doc ready end 
 
-
+/*Get Search Request*/
 function getRequest(searchTerm){
-  emptyFullVid ();
-  emptyThumbnails ();
+  //emptyFullVid(); not sure if I want this behavior!
+  emptyThumbnails();
   var params = {
     q: searchTerm,
     part: 'snippet',
@@ -50,6 +51,7 @@ function getRequest(searchTerm){
   });
 } //getRequest end
 
+/*Show Results*/
 function showResults(results){
   var html = "";
   $.each(results, function(index,value){
@@ -72,20 +74,26 @@ function showResults(results){
     
   }); //each loop end
 
-  showMore ();
-  //$('#search-results').html(html);
+  $('.moreResults').show();//show moreResults button
+
 } // showResults end
 
+showMore (); // call showMore results function <--this was in wrong position
+
+/*Swap Out Full Video When New Thumb Is Clicked*/
 function emptyFullVid () {
   $('#fullPlay').empty();
 }
 
+/*Swap Out Thumbnails When New Request Is Sent*/
 function emptyThumbnails () {
-  $('#search_results').empty();
+  $('#search_results').empty(); 
 }
+
+/*Show More Thumbnails When Show More Button Is Clicked*/
 function showMore (){
-  $('.moreResults').click (function () {
-     $('#search_results').html('');
+    $('.moreResults').click (function () {  
+    emptyThumbnails ();
     getRequest (searchTerm);
   });
 }
