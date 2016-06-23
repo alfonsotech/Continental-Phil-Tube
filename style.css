@@ -11,13 +11,17 @@
 }
 .jumbotron {
 	text-align: center;
+	border: 1px dotted #212121;
 
 }
 .col-md-6 {
-	padding: 100px;
+	padding: 50px;
 }
 h1 {
 	color: #cd201f !important;
+}
+.subtext {
+	font-size: 2em !important;
 }
 .form {
 
@@ -62,6 +66,7 @@ hr {
 #fullPlay {
 	text-align: center;
 	padding: 40px;
+	/*border: 1px dotted #cd201f;*/
 
 }
 /*FULL VIDEO PLAY*/
@@ -79,9 +84,22 @@ hr {
 .movement {
 	font-size: 14px;
 	margin: 5px;
+	border: 1px solid #212121;
+	border-radius: 1px;
 }
 #fullPlay p {
 	text-align: left;
 	
 }
-
+#search_results {
+	
+	margin-bottom: 50px;
+	
+}
+#message {
+	font-size: 24px;
+	text-align: center;
+	border: 1px dotted #cd201f;
+	
+	
+}
