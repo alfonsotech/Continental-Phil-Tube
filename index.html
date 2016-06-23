@@ -5,78 +5,95 @@
 		<meta charset="UTF-8">
 		<title>Continental Philosophy Tube</title>
 		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
 	</head>
 
 
 	<body>
-		<!-- Header -->
-		<section class="header">
-			<div class="header_wrap">
-				<div class="header_data">
-					<header><h1>Continental Philosophy Tube</h1></header>
-					<p>Search for the most recent Youtube videos on topics in Continental Philosophy. <br>Just click a philosopher's name or a movement below. </p>
-				</div><!--/.header_data -->
-			</div><!--/.header_wrap -->
-		</section>
+		<!-- Bootstrap Build-Out-->
+		<div class="jumbotron">
+			<!-- Header -->
+			<section class="header">
+				<div class="header_wrap">
+					<div class="header_data">
+						<header><h1>Continental Philosophy Tube</h1></header>
+						<p>Search for the most recent Youtube videos on topics in Continental Philosophy. <br>Just click a philosopher's name or a movement below. </p>
+					</div><!--/.header_data -->
+				</div><!--/.header_wrap -->
+			</section><!--/.header -->
+		</div><!--/.jumbotron -->
 
-		<!-- Search Form -->
-		<section class="form">
-			<div class="form_wrap">
-				<div class="form_data">
-					<form id="search-term"> 
-						<h1>Philosophers</h1>
-						<button type="submit" class="philosopher" data-value="Adorno">Adorno</button>
-						<button type="submit" class="philosopher">Agamben</button>
-						<button type="submit" class="philosopher">Arendt</button>
-						<button type="submit" class="philosopher">Bachelard</button>
-						<button type="submit" class="philosopher">Beauvoir</button>
-						<button type="submit" class="philosopher">Butler</button>
-						<button type="submit" class="philosopher">Chomsky</button>
-						<button type="submit" class="philosopher">Deleuze</button>
-						<button type="submit" class="philosopher">Derrida</button>
-						<button type="submit" class="philosopher">Descartes</button>
-						<button type="submit" class="philosopher">Fanon</button>
-						<button type="submit" class="philosopher">Foucault</button>
-						<button type="submit" class="philosopher">Hegel</button>
-						<button type="submit" class="philosopher">Heidegger</button>
-						<button type="submit" class="philosopher">Husserl</button>
-						<button type="submit" class="philosopher">Irigaray</button>
-						<button type="submit" class="philosopher">Kant</button>
-						<button type="submit" class="philosopher">Kierkegaard</button>
-						<button type="submit" class="philosopher">Leibniz</button>
-						<button type="submit" class="philosopher">Levinas</button>
-						<button type="submit" class="philosopher">Lyotard</button>
-						<button type="submit" class="philosopher">Marx</button>
-						<button type="submit" class="philosopher">Merleau-Ponty</button>
-						<button type="submit" class="philosopher">Nietzsche</button>
-						<button type="submit" class="philosopher">Said</button>
-						<button type="submit" class="philosopher">Sartre</button>
-						<button type="submit" class="philosopher">Spinoza</button>
-						<button type="submit" class="philosopher">Zizek</button>
-						<br>
-						<h1>Movements</h1>
-						<button type="submit" class="movement">Critical Theory</button>
-						<button type="submit" class="movement">Existentialism</button>
-						<button type="submit" class="movement">Feminist Philosophy</button>
-						<button type="submit" class="movement">Frankfurt School</button>
-						<button type="submit" class="movement">Phenomenology</button>
-						<button type="submit" class="movement">Poststructuralism</button>
-						<!--<button type="submit" class="random">Surprise Me!</button> -->	
-					</form>
-				</div><!--/.form_data -->
-			</div><!--/.form_wrap -->
-		</section>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6"> 
+					<!-- Search Form -->
+					<section class="form">
+						<div class="form_wrap">
+							<div class="form_data">
+								<form id="search-term"> 
+									<h1>Philosophers</h1>
+									<button type="submit" class="philosopher" data-value="Theodore Adorno">Adorno</button>
+									<button type="submit" class="philosopher" data-value="Giorgio Agamben">Agamben</button>
+									<button type="submit" class="philosopher" data-value="Hannah Arendt">Arendt</button>
+									<button type="submit" class="philosopher" data-value="Gaston Bachelard">Bachelard</button>
+									<button type="submit" class="philosopher" data-value="Simone de Beauvoir">Beauvoir</button>
+									<button type="submit" class="philosopher" data-value="Judith Butler">Butler</button>
+									<button type="submit" class="philosopher" data-value="Noam Chomsky">Chomsky</button>
+									<button type="submit" class="philosopher" data-value="Gilles Deleuze">Deleuze</button>
+									<button type="submit" class="philosopher" data-value="Gilles Deleuze and Felix Guattari">Deleuze & Guattari </button>
+									<button type="submit" class="philosopher" data-value="Jacques Derrida">Derrida</button>
+									<button type="submit" class="philosopher" data-value="Rene Descartes">Descartes</button>
+									<button type="submit" class="philosopher" data-value="Franz Fanon">Fanon</button>
+									<button type="submit" class="philosopher" data-value="Michel Foucault">Foucault</button>
+									<button type="submit" class="philosopher" data-value="Georg Wilhelm Friedrich Hegel">Hegel</button>
+									<button type="submit" class="philosopher" data-value="Martin Heidegger">Heidegger</button>
+									<button type="submit" class="philosopher" data-value="Edmund Husserl">Husserl</button>
+									<button type="submit" class="philosopher" data-value="Luce Irigaray">Irigaray</button>
+									<button type="submit" class="philosopher" data-value="Immanuel Kant">Kant</button>
+									<button type="submit" class="philosopher" data-value="Søren Kierkegaard">Kierkegaard</button>
+									<button type="submit" class="philosopher" data-value="Gottfried Wilhelm Leibniz">Leibniz</button>
+									<button type="submit" class="philosopher" data-value="Emmanuel Levinas">Levinas</button>
+									<button type="submit" class="philosopher" data-value="Jean-François Lyotard">Lyotard</button>
+									<button type="submit" class="philosopher" data-value="Karl Marx">Marx</button>
+									<button type="submit" class="philosopher" data-value="Maurice Merleau-Ponty">Merleau-Ponty</button>
+									<button type="submit" class="philosopher" data-value="Friedrich Nietzsche">Nietzsche</button>
+									<button type="submit" class="philosopher" data-value="Edward Said">Said</button>
+									<button type="submit" class="philosopher" data-value="Jean-Paul Sartre">Sartre</button>
+									<button type="submit" class="philosopher" data-value="Baruch Spinoza">Spinoza</button>
+									<button type="submit" class="philosopher" data-value="Slavoj Zizek">Zizek</button>
+									<br>
+									<h1>Movements</h1>
+									<button type="submit" class="movement" data-value="Critical Theory">Critical Theory</button>
+									<button type="submit" class="movement" data-value="Critical Race Theory">Critical Race Theory</button>
+									<button type="submit" class="movement" data-value="Existentialism">Existentialism</button>
+									<button type="submit" class="movement" data-value="Feminist Philosophy">Feminist Philosophy</button>
+									<button type="submit" class="movement" data-value="Frankfurt School">Frankfurt School</button>
+									<button type="submit" class="movement" data-value="Phenomenology">Phenomenology</button>
+									<button type="submit" class="movement" data-value="Poststructuralism">Poststructuralism</button>
+									<!--<button type="submit" class="random">Surprise Me!</button> -->	
+								</form>
+							</div><!--/.form_data -->
+						</div><!--/.form_wrap -->
+					</section> 
 
+				</div>
+				<div class="col-md-6"> 
+					<!-- Full Video Display -->
+					<section class="fullPlay">
+						<div class="fullPlay_wrap">
+							<div class="fullPlay_data">
+								<div id="fullPlay">	
+									<iframe width="560" height="315" src="https://www.youtube.com/embed/RBmlRihA9_s" frameborder="0" allowfullscreen></iframe>
+								</div>
+							</div><!-- /.fullPlay_data -->
+						</div><!-- /.fullPlay_wrap-->
+					</section>
+				</div>
+			</div><!-- /.row-->
+		</div><!--/.container -->
 
-		<!-- Full Video Display -->
-		<section class="fullPlay">
-			<div class="fullPlay_wrap">
-				<div class="fullPlay_data">
-					<div id="fullPlay">	</div>
-				</div><!-- /.fullPlay_data -->
-			</div><!-- /.fullPlay_wrap-->
-		</section>
-		
 		<!-- Thumbnails Display -->
 		<section class="thumbnails">
 			<!-- To be displayed on click 
@@ -89,13 +106,17 @@
 				</div><!-- /.thumbnails_data -->
 			</div><!-- /.thumbnails_wrap-->
 		</section>	
+
+	<div class="jumbotron">
 		<section class="contact">
 			<div class="contact_wrap">
 				<div class="contact_data">
-					<h1>Want to add a Philosopher or Movement? <br>Contact Dr.A: info@thinkphilosophy.org</h1>
+					<p>Want to add a Philosopher or Movement? <br>Contact Dr.A: info@thinkphilosophy.org</p>
 				</div>
 			</div>
 		</section>	
+	</div><!--/.jumbotron -->
+
 		<hr>
 		<section class="footer">
 			<footer>Copyright ©2016 Alfonso Web Development <br> A <a href="www.thinkphilosophy.org">thinkPhilosophy</a> Production</footer>
@@ -104,6 +125,7 @@
 	<!-- Scripts-->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 		<script  type='text/javascript' src='app.js'></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
 	</body>
 </html>

@@ -6,7 +6,7 @@ var nextToken;
 $(function(){
   $('.philosopher').click(function(event){
     event.preventDefault();
-    searchTerm = $(this).text() + ' philosophy' + ' -pdf' + ' -download';
+    searchTerm = $(this).attr('data-value') + ' philosophy' + ' -pdf' + ' -download';
     console.log(searchTerm);
     getRequest(searchTerm);
   });
@@ -61,8 +61,9 @@ function showResults(results){
     html += singleVid;
       
     var videoPlay = function (){
-      var vidLink = 'https://www.youtube.com/embed/' + value.id.videoId;
       emptyFullVid ();
+      var vidLink = 'https://www.youtube.com/embed/' + value.id.videoId;
+      
       $('<iframe width="560" height="315" frameborder="0" allowfullscreen></iframe>').attr('src', vidLink).appendTo('#fullPlay');
     };
     
