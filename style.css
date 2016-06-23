@@ -9,6 +9,16 @@
 	display: block;
 
 }
+.jumbotron {
+	text-align: center;
+
+}
+.col-md-6 {
+	padding: 100px;
+}
+h1 {
+	color: #cd201f !important;
+}
 .form {
 
 }
@@ -60,5 +70,18 @@ hr {
 }
 .fullPlay_data {
 
+}
+/*BUTTONS*/
+.moreResults {
+	font-size: 20px;
+}
+.philosopher,
+.movement {
+	font-size: 14px;
+	margin: 5px;
+}
+#fullPlay p {
+	text-align: left;
+	
 }
 
