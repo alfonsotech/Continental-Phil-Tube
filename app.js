@@ -75,7 +75,7 @@ function showResults(results){
     
   }); //each loop end
 
-  $('.moreResults').show();//show moreResults button
+  $('.moreResults').removeClass('hidden');//show moreResults button
 
 } // showResults end
 
