@@ -12,9 +12,6 @@ $(function(){
     getRequest(searchTerm);
   });
 
-}); //doc ready end 
-
-$(function(){
   $('.movement').click(function(event){
     event.preventDefault();
     nextToken = "";
@@ -48,14 +45,14 @@ function getRequest(searchTerm){
 
   //execute Get request
   $.getJSON(url, params, function(data){
-    showResults(data.items);
+    if (data.items.length === 0) {
+      noResults ();
+    } else {showResults(data.items)}  
     nextToken = data.nextPageToken;
   });
 } //getRequest end
 
- /*if (there are no results) {
-      noResults ();
-    } else {show results}*/
+ 
 
 /*Show Results*/
 function showResults(results){
@@ -109,3 +106,4 @@ function noResults () {
   $('#search_results').html('<p>There are no results for this search. Please try again!</p>');
 }
 
+//$(div).append('<button data-value = " '   +  philosopher.dataValue +  ' " >'  + philosopher.name + '</button>')

@@ -25,6 +25,7 @@ h1 {
 }
 iframe {
 	max-width: 100%;
+	margin-top: 5px;
 }
 footer,
 .contact {
@@ -56,8 +57,13 @@ footer,
 
 #fullPlay {
 	text-align: center;
-	padding: 40px 0px 40px 80px;
-	margin-top: 18%;
+	margin: 58px 0px 40px 80px;
+	border-top: 1px solid #212121;
+	border-right: 1px solid #CCCCCC;
+	border-bottom: 1px solid #CCCCCC;
+	border-left: 1px solid #CCCCCC;
+	border-bottom-left-radius: 5px; 
+	border-bottom-right-radius: 5px;
 }
 
 /*BUTTONS*/
@@ -83,11 +89,7 @@ footer,
 
 #fullPlay p {
 	text-align: left;
-	padding: 3px 10px 3px 10px;
-	border-top: 0px solid #212121;
-	border-right: 1px solid #CCCCCC;
-	border-bottom: 1px solid #CCCCCC;
-	border-left: 1px solid #CCCCCC;
+	padding: 0px 10px 0px 10px;
 }
 #search_results {
 	width: 100%;
