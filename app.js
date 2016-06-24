@@ -63,8 +63,8 @@ function showResults(results){
     var videoPlay = function (){
       emptyFullVid ();
       var vidLink = 'https://www.youtube.com/embed/' + value.id.videoId;
-      
       $('<iframe width="560" height="315" frameborder="0" allowfullscreen></iframe>').attr('src', vidLink).appendTo('#fullPlay');
+      window.scrollTo(0,0);
     };
     
     var singleVid = $(singleVid); 
