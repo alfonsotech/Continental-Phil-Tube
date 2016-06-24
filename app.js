@@ -6,6 +6,7 @@ var nextToken;
 $(function(){
   $('.philosopher').click(function(event){
     event.preventDefault();
+    nextToken = "";
     searchTerm = $(this).attr('data-value') + ' philosophy' + ' -pdf' + ' -download';
     console.log(searchTerm);
     getRequest(searchTerm);
@@ -16,6 +17,7 @@ $(function(){
 $(function(){
   $('.movement').click(function(event){
     event.preventDefault();
+    nextToken = "";
     searchTerm = $(this).text() + ' philosophy' + ' -pdf' + ' -download';
     console.log(searchTerm);
     getRequest(searchTerm);
@@ -50,6 +52,10 @@ function getRequest(searchTerm){
     nextToken = data.nextPageToken;
   });
 } //getRequest end
+
+ /*if (there are no results) {
+      noResults ();
+    } else {show results}*/
 
 /*Show Results*/
 function showResults(results){
@@ -97,5 +103,9 @@ function showMore (){
     emptyThumbnails ();
     getRequest (searchTerm);
   });
+}
+
+function noResults () {
+  $('#search_results').html('<p>There are no results for this search. Please try again!</p>');
 }
 

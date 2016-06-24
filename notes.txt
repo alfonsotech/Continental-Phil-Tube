@@ -1,2 +1,6 @@
+TO DO
+-show more button needs to align with div above it
+-clean the pagetoken variable when change the category
 
-
+-function to show message when no results are avaialble
+-add bootstrap to CPT project
