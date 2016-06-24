@@ -103,7 +103,7 @@ function showMore (){
 }
 
 function noResults () {
-  $('#search_results').html('<p>There are no results for this search. Please try again!</p>');
+  $('#search_results').html('<p class="noMoreResults">There are no more results for this search. <br>Please choose another Philosopher or Movement!</p>');
 }
 
 //$(div).append('<button data-value = " '   +  philosopher.dataValue +  ' " >'  + philosopher.name + '</button>')
