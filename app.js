@@ -47,7 +47,10 @@ function getRequest(searchTerm){
   $.getJSON(url, params, function(data){
     if (data.items.length === 0) {
       noResults ();
-    } else {showResults(data.items)}  
+    } else {
+        $('.moreResults').show();
+      showResults(data.items)
+    }  
     nextToken = data.nextPageToken;
   });
 } //getRequest end
