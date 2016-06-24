@@ -60,19 +60,20 @@ function getRequest(searchTerm){
 /*Show Results*/
 function showResults(results){
   var html = "";
+
   $.each(results, function(index,value){
     thumbnail = '<img src= " ' + value.snippet.thumbnails.medium.url + ' " />';
     var singleVid = '<div class="target"><p>' + value.snippet.title + '</p>' + '<br>' +'<div>' + thumbnail +'</div></div>';
-
     html += singleVid;
       
+
     var videoPlay = function (){
       emptyFullVid ();
       var vidLink = 'https://www.youtube.com/embed/' + value.id.videoId;
       $('<iframe width="560" height="315" frameborder="0" allowfullscreen></iframe>').attr('src', vidLink).appendTo('#fullPlay');
       window.scrollTo(0,0);
     };
-    
+    window.scrollTo(960,670);
     var singleVid = $(singleVid); 
     console.log(singleVid); 
     singleVid.click(videoPlay);
@@ -81,7 +82,7 @@ function showResults(results){
     
   }); //each loop end
 
-  $('.moreResults').removeClass('hidden');//show moreResults button
+  $('.moreResults').removeClass('hidden').css('visibility', 'visible');//show moreResults button
 
 } // showResults end
 
@@ -107,7 +108,7 @@ function showMore (){
 
 function noResults () {
   $('#search_results').html('<p class="noMoreResults">There are no more results for this search. <br>Please choose another Philosopher or Movement!</p>');
-  $('.moreResults').hide();
+  $('.moreResults').css('visibility', 'hidden');
 }
 
 //$(div).append('<button data-value = " '   +  philosopher.dataValue +  ' " >'  + philosopher.name + '</button>')

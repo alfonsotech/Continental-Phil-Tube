@@ -70,7 +70,7 @@ footer,
 .moreResults {
 	max-width: 800px;
 	margin: 0px auto;
-	display: block;
+	display: block !important;
 	font-size: 18px;
 	padding: 6px;
 	background-color: #CCCCCC;
