@@ -65,6 +65,12 @@ footer,
 	border-bottom-left-radius: 5px; 
 	border-bottom-right-radius: 5px;
 }
+.contact {
+	font-size: 36px;
+}
+hr {
+	max-width: 78%;
+}
 
 /*BUTTONS*/
 .moreResults {
