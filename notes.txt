@@ -4,3 +4,19 @@ Xclean the pagetoken variable when change the category
 
 -function to show message when no results are avaialble
 xadd bootstrap to CPT project
+
+var philosopher = [{
+	name: Adorno
+	dataValue: "Theodore Adorno"
+	
+}
+]
+var movements = [
+
+]
+
+{ "Adorno": "Theodore" , "Name": "Value" }
+
+$(div).append('<button data-value = " '   + philosopher.dataValue + ' " '> + philosopher.name '</button>')
+
+data-value="' + philoso[her.dataValue + '"
