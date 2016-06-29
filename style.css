@@ -86,7 +86,13 @@ footer,
 	border: 1px solid gray;
 	border-radius: 1px;
 }
-
+#tweetIt {
+	font-size: 32px;
+	margin-bottom: 40px;
+	background-color: #cd201f;
+	color: #ffffff;
+	padding: 10px;
+}
 #fullPlay p {
 	text-align: left;
 	padding: 0px 10px 0px 10px;

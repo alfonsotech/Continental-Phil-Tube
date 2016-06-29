@@ -111,4 +111,11 @@ function noResults () {
   $('.moreResults').css('visibility', 'hidden');
 }
 
+ $('#tweetIt').click(function(e){
+    // tell browser not to do the default action
+    e.preventDefault();
+   // trigger a new window with the Twitter dialog
+    window.open('http://twitter.com/share?url=undefined&text=Continental Philosophy Tube: Search for the latest Continental Philosophy vids on Youtube: ' + 'http://continentalphilosophytube.com/', 'twitterwindow', 'height=450, width=550, top='+($(window).height()/2 - 225) +', left='+$(window).width()/2 +', toolbar=0, location=0, menubar=0, directories=0, scrollbars=0');
+  });
+
 //$(div).append('<button data-value = " '   +  philosopher.dataValue +  ' " >'  + philosopher.name + '</button>')
