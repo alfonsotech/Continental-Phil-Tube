@@ -15,7 +15,7 @@ $(function(){
   $('.movement').click(function(event){
     event.preventDefault();
     nextToken = "";
-    searchTerm = $(this).text() + ' philosophy' + ' -pdf' + ' -download';
+    searchTerm = $(this).attr('data-value') + ' philosophy' + ' -pdf' + ' -download';
     console.log(searchTerm);
     getRequest(searchTerm);
   });
@@ -23,7 +23,7 @@ $(function(){
   $('.tropes').click(function(event){
     event.preventDefault();
     nextToken = "";
-    searchTerm = $(this).text() + ' philosophy' + ' -pdf' + ' -download';
+    searchTerm = $(this).attr('data-value') + ' philosophy' + ' -pdf' + ' -download';
     console.log(searchTerm);
     getRequest(searchTerm);
   });
