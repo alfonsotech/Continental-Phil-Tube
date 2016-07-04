@@ -85,8 +85,9 @@ hr {
 	margin-bottom: 60px;
 }
 .philosopher,
-.movement {
-	font-size: 18px;
+.movement,
+.tropes {
+	font-size: 12px;
 	margin: 5px;
 	background-color: #CCCCCC;
 	border: 1px solid gray;

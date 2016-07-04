@@ -20,6 +20,14 @@ $(function(){
     getRequest(searchTerm);
   });
 
+  $('.tropes').click(function(event){
+    event.preventDefault();
+    nextToken = "";
+    searchTerm = $(this).text() + ' philosophy' + ' -pdf' + ' -download';
+    console.log(searchTerm);
+    getRequest(searchTerm);
+  });
+
 }); //doc ready end 
 
 /*Get Search Request*/
@@ -33,9 +41,10 @@ function getRequest(searchTerm){
     videoEmbeddable: true,
     //videoCategoryId:'', https://developers.google.com/youtube/v3/docs/videoCategories/list#parameters
     maxResults:6,
-    order:'date',
+    //add drop=down to chose order parameter
     order:'rating',
     order:'viewCount',
+    //parameter default is date
     order:'date',
     key: 'AIzaSyBNqWhJ5DVOzZe4OEavx1-aB1uQTr6KJrA',
     pageToken: nextToken
@@ -73,7 +82,7 @@ function showResults(results){
       $('<iframe width="560" height="315" frameborder="0" allowfullscreen></iframe>').attr('src', vidLink).appendTo('#fullPlay');
       window.scrollTo(0,0);
     };
-    window.scrollTo(960,670);
+    window.scrollTo(0,1500);
     var singleVid = $(singleVid); 
     console.log(singleVid); 
     singleVid.click(videoPlay);
@@ -117,5 +126,7 @@ function noResults () {
    // trigger a new window with the Twitter dialog
     window.open('http://twitter.com/share?url=undefined&text=Continental Philosophy Tube: Search for the latest Continental Philosophy vids on Youtube: ' + 'http://continentalphilosophytube.com/', 'twitterwindow', 'height=450, width=550, top='+($(window).height()/2 - 225) +', left='+$(window).width()/2 +', toolbar=0, location=0, menubar=0, directories=0, scrollbars=0');
   });
+
+
 
 //$(div).append('<button data-value = " '   +  philosopher.dataValue +  ' " >'  + philosopher.name + '</button>')

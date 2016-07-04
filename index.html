@@ -29,7 +29,7 @@
 					<div class="header_data">
 						<header><h1>Continental Philosophy Tube</h1></header>
 						<p class="subtext">Search for the most recent Youtube videos on topics in Continental Philosophy. <br>Click a philosopher's name or a movement below to get started. </p>
-						<button id="tweetIt"><i class="fa fa-twitter fa-fw"></i>Share Over Twitter</button>
+						<button id="tweetIt"><i class="fa fa-twitter fa-fw"></i>Tweet It!</button>
 					</div><!--/.header_data -->
 				</div><!--/.header_wrap -->
 			</section><!--/.header -->
@@ -38,7 +38,7 @@
 
 		<div class="container">
 			<div class="row">
-				<div class="col-md-5"> 
+				<div class="col-md-6"> 
 					<!-- Search Form -->
 					<section class="form">
 						<div class="form_wrap">
@@ -71,6 +71,7 @@
 									<button type="submit" class="philosopher" data-value="Karl Marx">Marx</button>
 									<button type="submit" class="philosopher" data-value="Maurice Merleau-Ponty">Merleau-Ponty</button>
 									<button type="submit" class="philosopher" data-value="Friedrich Nietzsche">Nietzsche</button>
+									<button type="submit" class="philosopher" data-value="Jaques Ranciére">Ranciére</button>
 									<button type="submit" class="philosopher" data-value="Edward Said">Said</button>
 									<button type="submit" class="philosopher" data-value="Jean-Paul Sartre">Sartre</button>
 									<button type="submit" class="philosopher" data-value="Baruch Spinoza">Spinoza</button>
@@ -79,11 +80,88 @@
 									<h1>Movements</h1>
 									<button type="submit" class="movement" data-value="Critical Theory">Critical Theory</button>
 									<button type="submit" class="movement" data-value="Critical Race Theory">Critical Race Theory</button>
+									<button type="submit" class="movement" data-value="deconstruction">Deconstruction</button>
 									<button type="submit" class="movement" data-value="Existentialism">Existentialism</button>
+									<button type="submit" class="movement" data-value="existential phenomenology">Existential Phenomenology</button>
 									<button type="submit" class="movement" data-value="Feminist Philosophy">Feminist Philosophy</button>
 									<button type="submit" class="movement" data-value="Frankfurt School">Frankfurt School</button>
+									<button type="submit" class="movement" data-value="german idealism">German Idealism</button>
+									<button type="submit" class="movement" data-value="hermeneutics">Hermeneutics</button>
+									<button type="submit" class="movement" data-value="marxism historical materialism">Marxism/Historical Materialism</button>
 									<button type="submit" class="movement" data-value="Phenomenology">Phenomenology</button>
+									<button type="submit" class="movement" data-value="Post-Marxism">Post-Marxism</button>
 									<button type="submit" class="movement" data-value="Poststructuralism">Poststructuralism</button>
+									<button type="submit" class="movement" data-value="Postcolonialism">Postcolonialism</button>
+									
+
+
+								<h1>Tropes</h1>
+
+									
+
+									<button type="submit" class="tropes" data-value="alterity">Alterity</button>
+
+
+									<button type="submit" class="tropes" data-value="anarchism anarchist">Anarchism</button>
+
+									<button type="submit" class="tropes" data-value="authenticity">Authenticity</button>
+
+									
+
+									<button type="submit" class="tropes" data-value="boredom">Boredom</button>
+
+									
+
+
+									<button type="submit" class="tropes" data-value="dasein">Dasein</button>
+
+									
+
+									<button type="submit" class="tropes" data-value="Écriture féminine">Écriture féminine</button>
+
+									<button type="submit" class="tropes" data-value="eternal return">Eternal Return</button>
+
+									<button type="submit" class="tropes" data-value="face-to-face">Face-to-face</button>
+
+									<button type="submit" class="tropes" data-value="flâneur">Flâneur</button>
+
+									<button type="submit" class="tropes" data-value="geist">Geist</button>
+
+									<button type="submit" class="tropes" data-value="gender theory">Gender Theory</button>
+
+									<button type="submit" class="tropes" data-value="Genealogy">Genealogy</button>
+
+									<button type="submit" class="tropes" data-value="hegelianism">Hegelianism</button>
+
+									
+
+									<button type="submit" class="tropes" data-value="historicity">Historicity</button>
+
+									
+
+									<button type="submit" class="tropes" id="strong" data-value="intersubjectivity">Intersubjectivity</button>
+									
+									
+
+									<button type="submit" class="tropes" data-value="lifeworld">Lifeworld</button>
+
+									<button type="submit" class="tropes" id="strong" data-value="lived body Merleau-Ponty">Lived Body</button>
+
+									
+
+
+									<button type="submit" class="tropes" data-value="queer theory">Queer Theory</button>
+
+									<button type="submit" class="tropes" data-value="Repetition">Repetition</button>
+
+									<button type="submit" class="tropes" data-value="ressentiment">Ressentiment</button>
+
+									<button type="submit" class="tropes" data-value="semeiotics">Semeiotics</button>
+
+									<button type="submit" class="tropes" data-value="strategic essentialism">Strategic Essentialism</button>
+
+									<button type="submit" class="tropes" data-value="sublime">Sublime</button>
+
 									<!--<button type="submit" class="random">Surprise Me!</button> -->	
 								</form>
 							</div><!--/.form_data -->
@@ -91,9 +169,9 @@
 					</section> 
 				</div><!-- /.col-md-5-->
 
-				<div class="col-md-7"> 
+				<div class="col-md-6"> 
 					<!-- Full Video Display -->
-					<section class="fullPlay">
+					<section class="fullPlay" id="fPlay">
 						<div class="fullPlay_wrap">
 							<div class="fullPlay_data">
 								<div id="fullPlay">	
@@ -108,7 +186,7 @@
 		</div><!--/.container -->
 
 		<!-- Thumbnails Display -->
-		<section class="thumbnails">
+		<section class="thumbnails" id="thumbnails">
 					<!-- To be displayed on click 
 					<h1>Thumbnails</h1>
 					<p>Click on a thumbnail to play to video.</p>-->
