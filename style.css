@@ -18,6 +18,8 @@
 }
 h1 {
 	color: #cd201f !important;
+	font-size: 3em !important;
+	margin-bottom: 0px !important;
 }
 
 .subtext {
@@ -57,13 +59,15 @@ footer,
 
 #fullPlay {
 	text-align: center;
-	margin: 58px 0px 40px 80px;
+	margin: 20px 0px 20px 10px !important;
+	padding: 0px 5px 0px 5px;
 	border-top: 1px solid #212121;
 	border-right: 1px solid #CCCCCC;
 	border-bottom: 1px solid #CCCCCC;
 	border-left: 1px solid #CCCCCC;
 	border-bottom-left-radius: 5px; 
 	border-bottom-right-radius: 5px;
+	line-height: 1.43;
 }
 .contact {
 	font-size: 36px;
@@ -87,7 +91,7 @@ hr {
 .philosopher,
 .movement,
 .tropes {
-	font-size: 12px;
+	font-size: 14px;
 	margin: 5px;
 	background-color: #CCCCCC;
 	border: 1px solid gray;
@@ -96,7 +100,7 @@ hr {
 
 #tweetIt,
 #twitterButton {
-	font-size: 24px;
+	font-size: 20px;
 	margin-bottom: 40px;
 	background-color: #cd201f;
 	color: #ffffff;
@@ -104,7 +108,8 @@ hr {
 }
 #fullPlay p {
 	text-align: left;
-	padding: 0px 10px 0px 10px;
+	padding: 10px 10px 0px 10px;
+	font-size: 1em;
 }
 #search_results {
 	width: 100%;
