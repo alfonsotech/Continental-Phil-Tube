@@ -116,7 +116,7 @@ function showMore (){
 }
 
 function noResults () {
-  $('#search_results').html('<p class="noMoreResults">There are no more results for this search. <br>Please choose another Philosopher or Movement!</p>');
+  $('#search_results').html('<p class="noMoreResults">There are no more results for this search. <br>Please choose another Philosopher, Movement, or Trope!</p>');
   $('.moreResults').css('visibility', 'hidden');
 }
 
