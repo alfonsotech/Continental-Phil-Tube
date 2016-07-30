@@ -59,7 +59,7 @@ footer,
 
 #fullPlay {
 	text-align: center;
-	margin: 20px 0px 20px 10px !important;
+	margin: 0px 0px 20px 10px !important;
 	padding: 0px 5px 0px 5px;
 	border-top: 1px solid #212121;
 	border-right: 1px solid #CCCCCC;
@@ -75,6 +75,12 @@ footer,
 hr {
 	max-width: 78%;
 }
+.philosophersClass, .movementsClass, .tropesClass {
+	background-color: #F2F2F2;
+	border: 1px solid #C7C7C7;
+	border-radius: .5px;
+	padding: 20px;
+}
 
 /*BUTTONS*/
 .moreResults {
@@ -83,8 +89,8 @@ hr {
 	display: block !important;
 	font-size: 18px;
 	padding: 6px;
-	background-color: #CCCCCC;
-	border: 1px solid gray;
+	background-color: #F2F2F2;
+	border: 1px solid #C7C7C7;
 	border-radius: 1px;
 	margin-bottom: 60px;
 }
@@ -93,8 +99,8 @@ hr {
 .tropes {
 	font-size: 14px;
 	margin: 5px;
-	background-color: #CCCCCC;
-	border: 1px solid gray;
+	background-color: #ffffff;
+	border: 1px solid #C7C7C7;
 	border-radius: 1px;
 }
 
