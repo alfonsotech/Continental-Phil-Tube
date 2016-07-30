@@ -82,7 +82,7 @@ function showResults(results){
       $('<iframe width="560" height="315" frameborder="0" allowfullscreen></iframe>').attr('src', vidLink).appendTo('#fullPlay');
       window.scrollTo(0,0);
     };
-    window.scrollTo(0,950);
+    
     var singleVid = $(singleVid); 
     console.log(singleVid); 
     singleVid.click(videoPlay);
